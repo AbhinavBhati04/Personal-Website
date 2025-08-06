@@ -21,7 +21,6 @@ h2{
   font-family: 'Montserrat', sans-serif;
 }
  
-
 .hero-banner {
   height: 100vh;
   background-image: url("images/galaxy.png");
@@ -985,7 +984,7 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   
-  min-height: 100vh;               /* 🔥 Full screen height */
+  min-height: 100vh;               /* Full screen height */
   width: 100%;                   /* Full width */
   
   display: flex;

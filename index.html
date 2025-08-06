@@ -12,231 +12,253 @@
         <link href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
 
-
-
-
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-
-
     </head>
     <body>
+      <!-- ============================
+              Home Section (Hero)
+      ============================= -->
+      <section id="home" class="home-section">
 
-    
-    <section id="home" class="home-section">
-    <div id = "header"> <!-- Name Logo + Pages -->
-        <div class = "container">
-            <nav class = "navbar">
-                <img src = "images/nameLogo.png" class="logo">
+        <!-- ===== Header / Navigation ===== -->
+        <div id="header">
+          <div class="container">
+            <nav class="navbar">
 
-                  <!-- ✅ Hamburger Button for Mobile -->
-                <div class="hamburger" onclick="toggleMenu()">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
+              <!-- Logo -->
+              <img src="images/nameLogo.png" class="logo">
 
-                <!-- ✅ Slide-out Side Nav -->
-                <div class="side-nav" id="sideMenu">
-                  <a href="index.html" onclick="closeMenu()">Home</a>
-                  <a href="#about" onclick="closeMenu()">About</a>
-                  <a href="#experiences" onclick="closeMenu()">Experiences</a>
-                  <a href="#portfolio" onclick="closeMenu()">Portfolio</a>
-                  <a href="#articles" onclick="closeMenu()">Articles</a>
-                  <a href="#contact" onclick="closeMenu()">Contact</a>
-                  <a href="projects.html" onclick="closeMenu()">Projects</a>
-                </div>
-                
-                <ul> 
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#experiences" class="nav-link">Experiences</a></li>
-                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                    <li><a href="#articles" class="nav-link">Articles</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                </ul>
+              <!-- Hamburger Menu (Mobile) -->
+              <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <!-- Side Navigation (Slide-Out) -->
+              <div class="side-nav" id="sideMenu">
+                <a href="index.html" onclick="closeMenu()">Home</a>
+                <a href="#about" onclick="closeMenu()">About</a>
+                <a href="#experiences" onclick="closeMenu()">Experiences</a>
+                <a href="#portfolio" onclick="closeMenu()">Portfolio</a>
+                <a href="#articles" onclick="closeMenu()">Articles</a>
+                <a href="#contact" onclick="closeMenu()">Contact</a>
+                <a href="projects.html" onclick="closeMenu()">Projects</a>
+              </div>
+
+              <!-- Full Nav Menu (Desktop) -->
+              <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experiences" class="nav-link">Experiences</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#articles" class="nav-link">Articles</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="projects.html">Projects</a></li>
+              </ul>
+
             </nav>
+          </div>
         </div>
-    </div>  
 
-    <div class="hero-banner">
-        <div class="pixel-text">
+        <!-- ===== Hero Banner ===== -->
+        <div class="hero-banner">
+          <div class="pixel-text">
             <p class="small-line">Hi, I'm</p>
             <p class="big-line flicker">Abhinav Bhati</p>
             <p class="typing-line">Press START to begin the adventure</p>
-
+          </div>
+          <a href="#about" class="arcade-button">START</a>
         </div>
-        <a href="#about" class="arcade-button">START</a>
 
+      </section>
 
-    </div>  <!-- Background Image -->  
-    </section>
-    
-    <section id="about" class="about-section">
-        <div class="about-content">
       
-          <!-- Left: Collage Image -->
+      <!-- ============================
+              About Section
+      ============================= -->
+      <section id="about" class="about-section">
+        <div class="about-content">
+
+          <!-- ===== Left: Collage Image ===== -->
           <div class="about-image">
             <img src="images/CollageAbhi.png" alt="Photo Collage of Abhinav Bhati">
           </div>
-      
-          <!-- Right: Text and Icons -->
+
+          <!-- ===== Right: Text + Button ===== -->
           <div class="about-text">
             <div class="about-box">
               <h2>About Me</h2>
+
               <p>
                 Abhinav Bhati is a senior Computer Science student at the University of Western Ontario, passionate about the ever-evolving world of artificial intelligence. 
                 His academic path has allowed him to dive deep into the fundamentals of software engineering, algorithms, and machine learning, 
                 while building a mindset focused on innovation and experimentation.
               </p>
-            
+              
               <p>
                 Outside the classroom, Abhinav is always seeking a balance between creativity and discipline. 
                 Whether he’s exploring new destinations or pushing through reps at the gym, he finds inspiration in movement and challenge — 
                 values that also reflect in his approach to solving problems through code.
               </p>
-            
+              
               <p>
                 He’s especially fascinated by the intersection of AI and gaming. 
                 This has led him to develop artificial agents capable of playing games, 
                 a personal passion that fuses strategy, data, and behavior modeling into one immersive playground for learning.
               </p>
-            
+              
               <p>
                 Over time, Abhinav has discovered the value of iteration — not just in his code, but in himself. 
                 Through trial and reflection, he’s grown into a curious, self-driven learner who’s always eager to take on new projects and refine his skills. 
                 You can follow his journey, experiments, and creations throughout this site.
               </p>
-          
+
+              <!-- Button to next section -->
               <a href="#experiences" class="next-button to-tavern">
                 <span class="wave-text">
-                    <span style="--i:0">T</span>
-                    <span style="--i:1">o</span>
-                    <span style="--i:4">&nbsp;</span>
-                    <span style="--i:6">T</span>
-                    <span style="--i:6">a</span>
-                    <span style="--i:6">v</span>
-                    <span style="--i:7">e</span>
-                    <span style="--i:8">r</span>
-                    <span style="--i:9">n</span>
-                  </span>
+                  <span style="--i:0">T</span>
+                  <span style="--i:1">o</span>
+                  <span style="--i:4">&nbsp;</span>
+                  <span style="--i:6">T</span>
+                  <span style="--i:6">a</span>
+                  <span style="--i:6">v</span>
+                  <span style="--i:7">e</span>
+                  <span style="--i:8">r</span>
+                  <span style="--i:9">n</span>
+                </span>
               </a>
 
             </div>
           </div>
-      
+
         </div>
       </section>
 
+
+      <!-- =============================
+              Experiences Section
+      ============================== -->
       <section id="experiences" class="experience-section">
         <div class="experience-container">
-            
-            <div class="experience-header-box">
-                <h1>My Experiences</h1>
-                <p>S-Rank Quests</p>
+
+          <!-- Section Header -->
+          <div class="experience-header-box">
+            <h1>My Experiences</h1>
+            <p>S-Rank Quests</p>
+          </div>
+
+          <!-- Experience Cards Grid -->
+          <div class="experience-grid">
+
+            <!-- CIBC Internship Card -->
+            <div class="experience-card left-card">
+              <img src="images/CIBC-Logo.png" class="icon-company1">
+              <h3>FullStack Software Developer</h3>
+              <p>
+                Designed and deployed a metrics tracking application that streamlined analytics for the QA team, reducing data processing time from over six hours to just one. 
+                I built the full-stack solution using PostgreSQL, Python, and a custom front-end with visual dashboards—earning recognition from senior leadership
+                and a recommendation for organization-wide adoption.
+              </p>
             </div>
 
-            <div class="experience-grid">
-        
-                <div class="experience-card left-card">
-                    <img src="images/CIBC-Logo.png" class="icon-company1">
-                    <h3>FullStack Software Developer</h3>
-                    <p>
-                    Designed and deployed a metrics tracking application that streamlined analytics for the QA team, reducing data processing time from over six hours to just one. 
-                    I built the full-stack solution using PostgreSQL, Python, and a custom front-end with visual dashboards—earning recognition from senior leadership
-                    and a recommendation for organization-wide adoption.
-                    </p>
-                </div>
+            <!-- WAI + Western Card -->
+            <div class="experience-card middle-card">
+              <div class="logo-row">
+                <img src="images/WAI.png" class="icon-company2">
+                <img src="images/western.png" class="icon-company2">
+              </div>
+              <h3>Senior Director of Flagship</h3>
+              <p>
+                I led a team to deliver high-impact AI events, workshops, and hackathons that engaged over 140 attendees. 
+                I cultivated industry partnerships, organized networking and educational opportunities, 
+                and spearheaded training sessions—driving both community growth and a culture of innovation within Western’s AI ecosystem.
+              </p>
+            </div>
 
-                <div class="experience-card middle-card">
-                  
-                  <div class="logo-row">
-                    <img src="images/WAI.png" class="icon-company2">
-                    <img src="images/western.png" class="icon-company2">
-                  </div>
+            <!-- Instacart Consulting Card -->
+            <div class="experience-card right-card">
+              <img src="images/instacart.png" class="icon-company3">
+              <h3>Consultant</h3>
+              <p>
+                I collaborated with a four-member team to develop innovative customer acquisition and retention strategies in response to challenges posed by the COVID-19 pandemic. 
+                Our recommendation deck—focused on enhancing the Instacart app and customer service platform—was presented to senior executives 
+                and recognized among the top 10 submissions for its strategic depth and actionable insights.
+              </p>
+            </div>
 
-                    <h3>Senior Director of Flagship</h3>
-                    <p>
-                        I led a team to deliver high-impact AI events, workshops, and hackathons that engaged over 140 attendees. 
-                        I cultivated industry partnerships, organized networking and educational opportunities, 
-                        and spearheaded training sessions—driving both community growth and a culture of innovation within Western’s AI ecosystem.
-                    </p>
-                </div>
-            
-                <div class="experience-card right-card">
-                    <img src="images/instacart.png"  class="icon-company3">
-                    <h3>Consultant</h3>
-                    <p>
-                      I collaborated with a four-member team to develop innovative customer acquisition and retention strategies in response to challenges posed by the COVID-19 pandemic. 
-                      Our recommendation deck—focused on enhancing the Instacart app and customer service platform—was presented to senior executives 
-                      and recognized among the top 10 submissions for its strategic depth and actionable insights.
-                    </p>
-                </div>
-            </div>  
+          </div> <!-- End Experience Grid -->
 
-            <a href="#portfolio" class="next-button to-forest">
-                <span class="wave-text">
-                    <span style="--i:0">T</span>
-                    <span style="--i:1">o</span>
-                    <span style="--i:2">&nbsp;</span>
-                    <span style="--i:3">F</span>
-                    <span style="--i:4">o</span>
-                    <span style="--i:5">r</span>
-                    <span style="--i:6">e</span>
-                    <span style="--i:7">s</span>
-                    <span style="--i:8">t</span>
-                  </span>
-              </a>
+          <!-- Button to Next Section -->
+          <a href="#portfolio" class="next-button to-forest">
+            <span class="wave-text">
+              <span style="--i:0">T</span>
+              <span style="--i:1">o</span>
+              <span style="--i:2">&nbsp;</span>
+              <span style="--i:3">F</span>
+              <span style="--i:4">o</span>
+              <span style="--i:5">r</span>
+              <span style="--i:6">e</span>
+              <span style="--i:7">s</span>
+              <span style="--i:8">t</span>
+            </span>
+          </a>
+
         </div>
-
       </section>
-      
+
+        
+      <!-- =============================
+              Portfolio Section
+      ============================== -->
       <section id="portfolio" class="portfolio-section">
         <div class="portfolio-container">
-      
+
           <!-- Section Header -->
           <div class="portfolio-header-box">
-              <h1>Welcome to the Forest</h1>
-              <p class="subheading">Home to my Favorite Projects</p>
+            <h1>Welcome to the Forest</h1>
+            <p class="subheading">Home to my Favorite Projects</p>
           </div>
-      
-          <!-- Project Cards -->
+
+          <!-- Highlighted Project Cards -->
           <div class="portfolio-grid">
-      
+
             <!-- Project 1 -->
             <div class="portfolio-card">
               <img src="images/AiProj.jpg" alt="AI Preview" class="portfolio-card-img">
               <h3>ProjName</h3>
               <p class="portfolio-card-type">AI Project</p>
             </div>
-      
+
             <!-- Project 2 -->
             <div class="portfolio-card">
-              <img src="images/SpotProj.jpg" alt=">WebApp Api Project img" class="portfolio-card-img">
+              <img src="images/SpotProj.jpg" alt="WebApp API Project" class="portfolio-card-img">
               <h3>ProjName</h3>
-              <p class="portfolio-card-type">WebApp Api Project</p>
+              <p class="portfolio-card-type">WebApp API Project</p>
             </div>
-      
+
             <!-- Project 3 -->
             <div class="portfolio-card">
-              <img src="images/cyberProj.jpg" alt="cybersecurity project img" class="portfolio-card-img">
+              <img src="images/cyberProj.jpg" alt="Cybersecurity Project" class="portfolio-card-img">
               <h3>ProjName</h3>
-              <p class="portfolio-card-type">CyberSecuriy projectt</p>
+              <p class="portfolio-card-type">Cybersecurity Project</p>
             </div>
-      
-          </div>
 
+          </div> <!-- End .portfolio-grid -->
+
+          <!-- Navigation Signs -->
           <div class="sign-row">
-              <!-- Large wooden sign left -->
-              <div class="wooden-sign-centered">
-                <img src="images/pixelSign.png" alt="Wooden Sign" class="wooden-sign-img">
-                <a href="projects.html" class="wooden-sign-link">
-                  <span class="sign-line top-line">Go To ALL</span><br>
-                  <span class="sign-line bottom-line">Projects</span>
-                </a>
-              </div>
-            <!-- Large wooden sign right -->
+
+            <!-- Sign to Full Projects Page -->
+            <div class="wooden-sign-centered">
+              <img src="images/pixelSign.png" alt="Wooden Sign" class="wooden-sign-img">
+              <a href="projects.html" class="wooden-sign-link">
+                <span class="sign-line top-line">Go To ALL</span><br>
+                <span class="sign-line bottom-line">Projects</span>
+              </a>
+            </div>
+
+            <!-- Sign to Articles / Library Section -->
             <div class="wooden-sign-centered">
               <img src="images/pixelSign.png" alt="Wooden Sign" class="wooden-sign-img">
               <a href="#articles" class="wooden-sign-link">
@@ -252,164 +274,149 @@
                     <span style="--i:6">Y</span>
                   </span>
                 </span>
-
               </a>
             </div>
-          </div>
-        </div>
-      </section>
+
+          </div> <!-- End .sign-row -->
+
+        </div> <!-- End .portfolio-container -->
       
+      </section>
+        
+      <!-- =============================
+              Articles Section
+      ============================== -->
       <section id="articles" class="articles-section">
         <div class="articles-container">
-      
-          <!-- Left-Aligned Header -->
+
+          <!-- Section Header -->
           <div class="articles-header-box">
             <h1>The Library</h1>
             <p class="subheading">Insights From My Adventures</p>
           </div>
-      
-          
+
+          <!-- Grid of Article 'Books' -->
           <div class="articles-grid">
 
+            <!-- Article 1 -->
             <div class="article-book">
-
               <div class="article-title-box">
                 <h3>How AI Can Be Like A New Puppy</h3>
               </div>
 
-              <!-- Open book pages -->
               <div class="book-pages">
-                <!-- Left page (image) -->
                 <div class="book-left">
-                  <img src="images/puppy.png" alt="Article 1" class="article-img">
+                  <img src="images/puppy.png" alt="AI Puppy Article" class="article-img">
                 </div>
-          
-                <!-- Right page (text) -->
                 <div class="book-right">
                   <p class="article-preview">
-                    Anyone who has had a pet dog can relate to teaching the puppy it's way around life, whether it be asking for food or water, 
-                    to head out on a walk, or simply a little trick like rolling over. 
+                    Anyone who has had a pet dog can relate to teaching the puppy its way around life... 
                     The point is that...
                   </p>
                 </div>
               </div>
-          
-              <!-- Read More button below the book -->
-              <a href="https://bhatiabhi04.medium.com/how-ai-can-be-like-a-new-puppy-c0847ee0e937" target="_blank" class="read-more-btn">READ MORE</a>
-            </div>
-          
-       
-            <div class="article-book">
 
+              <a href="https://bhatiabhi04.medium.com/how-ai-can-be-like-a-new-puppy-c0847ee0e937" 
+                target="_blank" class="read-more-btn">READ MORE</a>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="article-book">
               <div class="article-title-box">
                 <h3>Intro to Nanotechnology</h3>
               </div>
 
-              <!-- Open book pages -->
               <div class="book-pages">
-                <!-- Left page (image) -->
                 <div class="book-left">
-                  <img src="images/nanoTech.jpg" alt="Article 1" class="article-img">
+                  <img src="images/nanoTech.jpg" alt="Nanotech Article" class="article-img">
                 </div>
-          
-                <!-- Right page (text) -->
                 <div class="book-right">
                   <p class="article-preview">
-                    “The quantum realm”
-                    Something you see on many TV shows, your favourite Sci-Fi movie, and even the Avengers.
+                    “The quantum realm” — Something you see on many TV shows and even the Avengers.
                     Ant-Man was stuck in this so-called “Quantum Realm” for five years when...
-
                   </p>
                 </div>
               </div>
-          
-              <!-- Read More button below the book -->
-              <a href="https://bhatiabhi04.medium.com/an-intro-to-nanotechnology-and-nanosensors-f3545bcafdc4" target="_blank" class="read-more-btn">READ MORE</a>
+
+              <a href="https://bhatiabhi04.medium.com/an-intro-to-nanotechnology-and-nanosensors-f3545bcafdc4" 
+                target="_blank" class="read-more-btn">READ MORE</a>
             </div>
 
+            <!-- Article 3 -->
             <div class="article-book">
-
               <div class="article-title-box">
-                <h3>Tommorow's Agriculture Starts Today</h3>
+                <h3>Tomorrow's Agriculture Starts Today</h3>
               </div>
 
-              <!-- Open book pages -->
               <div class="book-pages">
-                <!-- Left page (image) -->
                 <div class="book-left">
-                  <img src="images/vertFarm.png" alt="Article 1" class="article-img">
+                  <img src="images/vertFarm.png" alt="Vertical Farming Article" class="article-img">
                 </div>
-          
-                <!-- Right page (text) -->
                 <div class="book-right">
                   <p class="article-preview">
-                    25,000 human lives are lost each day to starvation, a problem that many can’t even seem to fathom. 
-                    Most of us are privileged enough to not have to worry about whether or not there will be food...
+                    25,000 human lives are lost each day to starvation — a problem many can’t even fathom.
+                    Most of us are privileged enough to not worry about whether there will be food...
                   </p>
                 </div>
               </div>
-          
-              <!-- Read More button below the book -->
-              <a href="https://bhatiabhi04.medium.com/tomorrows-agriculture-starts-today-fdef1dfd0c6" target="_blank" class="read-more-btn">READ MORE</a>
+
+              <a href="https://bhatiabhi04.medium.com/tomorrows-agriculture-starts-today-fdef1dfd0c6" 
+                target="_blank" class="read-more-btn">READ MORE</a>
             </div>
 
+            <!-- Final Article: Contact Invite -->
             <div class="article-book">
-
               <div class="article-title-box">
                 <h3>Let's Chat Over Some Coffee</h3>
               </div>
 
-              <!-- Open book pages -->
               <div class="book-pages">
-                <!-- Left page (image) -->
                 <div class="book-left">
-                  <img src="images/coffee.png" alt="Article 1" class="article-img no-border">
+                  <img src="images/coffee.png" alt="Contact Prompt" class="article-img no-border">
                 </div>
-          
-                <!-- Right page (text) -->
                 <div class="book-right">
                   <p class="article-preview">
-                    Want to come say hi? Pitch an idea? Or learn more about me? Click the button below to see all my socials!
-                    <br>
-                    <br>
+                    Want to come say hi? Pitch an idea? Or learn more about me?
+                    Click the button below to see all my socials!
+                    <br><br>
                     Thank you for taking part in this adventure !!!
+                  </p>
                 </div>
               </div>
-          
-              <!-- Read More button below the book -->
+
+              <!-- Contact Call-to-Action Button -->
               <a href="#contact" class="next-button to-contact">
-                
-                <span class="wave-text ">
-                    <span style="--i:0">C</span>
-                    <span style="--i:1">O</span>
-                    <span style="--i:2">N</span>
-                    <span style="--i:3">T</span>
-                    <span style="--i:4">A</span>
-                    <span style="--i:5">C</span>
-                    <span style="--i:6">T</span>
-                    <span style="--i:7">&nbsp;</span>
-                    <span style="--i:8">M</span>
-                    <span style="--i:9">E</span>
+                <span class="wave-text">
+                  <span style="--i:0">C</span>
+                  <span style="--i:1">O</span>
+                  <span style="--i:2">N</span>
+                  <span style="--i:3">T</span>
+                  <span style="--i:4">A</span>
+                  <span style="--i:5">C</span>
+                  <span style="--i:6">T</span>
+                  <span style="--i:7">&nbsp;</span>
+                  <span style="--i:8">M</span>
+                  <span style="--i:9">E</span>
                 </span>
-              
               </a>
             </div>
 
+          </div> <!-- End .articles-grid -->
 
-          </div>
-          
-      
-          </div>
-        </div>
+        </div> <!-- End .articles-container -->
       </section>
-      
+
+        
+      <!-- =============================
+              Contact Section
+      ============================== -->
       <section class="contact-section" id="contact">
         <div class="contact-container">
-      
-          <!-- Left: Contact Info -->
+
+          <!-- Contact Info (Left Side) -->
           <div class="contact-info">
             <h2>Lets Chat •ᴗ• </h2>
-      
+
             <div class="info-item">
               <span class="icon">📧</span>
               <div>
@@ -417,7 +424,7 @@
                 <p><strong>bhatiabhi04@gmail.com</strong></p>
               </div>
             </div>
-      
+
             <div class="info-item">
               <span class="icon">📱</span>
               <div>
@@ -425,7 +432,7 @@
                 <p><strong>Message Me!</strong></p>
               </div>
             </div>
-      
+
             <div class="info-item">
               <span class="icon">📍</span>
               <div>
@@ -434,27 +441,33 @@
               </div>
             </div>
           </div>
-      
-          <!-- Right: Social Icons Grid -->
+
+          <!-- Social Links Grid (Right Side) -->
           <div class="social-grid">
-            <a href="https://www.linkedin.com/in/abhinav-bhati/" target="_blank" class="social-item" ><img src="images/linkedin.png" alt="LinkedIn"><p>LinkedIn</p></a>
-            <a href="https://www.instagram.com/abhinav17330/" target="_blank" class="social-item" ><img src="images/insta.png" alt="Instagram"><p>Instagram</p></a>
-            <a href="https://github.com/AbhinavBhati04" target="_blank" class="social-item"><img src="images/github.png" alt="GitHub"><p>GitHub</p></a>
-            <a href="https://medium.com/@bhatiabhi04" target="_blank" class="social-item" ><img src="images/medium.png" alt="Medium"><p>Medium</p></a>
-            
+            <a href="https://www.linkedin.com/in/abhinav-bhati/" target="_blank" class="social-item">
+              <img src="images/linkedin.png" alt="LinkedIn">
+              <p>LinkedIn</p>
+            </a>
+
+            <a href="https://www.instagram.com/abhinav17330/" target="_blank" class="social-item">
+              <img src="images/insta.png" alt="Instagram">
+              <p>Instagram</p>
+            </a>
+
+            <a href="https://github.com/AbhinavBhati04" target="_blank" class="social-item">
+              <img src="images/github.png" alt="GitHub">
+              <p>GitHub</p>
+            </a>
+
+            <a href="https://medium.com/@bhatiabhi04" target="_blank" class="social-item">
+              <img src="images/medium.png" alt="Medium">
+              <p>Medium</p>
+            </a>
           </div>
-      
+
         </div>
       </section>
-      
-      
-      
-
-
-
-
-    
-    
+        
       <script src="index.js"></script>
     </body>
 </html>
