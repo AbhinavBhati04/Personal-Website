@@ -26,7 +26,9 @@ h2{
   height: 100vh;
   background-image: url("images/galaxy.png");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+
   position: relative;
 
   display: flex;
@@ -236,13 +238,46 @@ html {
 .about-section {
   min-height: 100vh;
   display: flex;
-  align-items: flex-start; /* 🔁 was center — causes clipping on zoom */
+  align-items: flex-start; 
   justify-content: center;
   padding: 100px 40px;
   background-image: url("images/sunset.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  background-repeat: no-repeat;
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .big-line {
+    font-size: 32px; /* Shrinks name from 96px */
+    text-align: center;
+    white-space: normal; /* Allow wrapping */
+  }
+
+  .small-line {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .typing-line {
+    font-size: 16px;
+    border-right: 1px solid white;
+    white-space: nowrap;
+  }
+
+  .arcade-button {
+    font-size: 16px;
+    padding: 15px 25px;
+  }
+
+  .hero-banner {
+    padding: 60px 15px;
+  }
+
+  .pixel-text p {
+    word-break: break-word;
+  }
 }
 
 
@@ -387,7 +422,8 @@ html {
   min-height: 100vh;
   background-image: url("images/tavern.jpg"); /* Customize this image */
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -509,7 +545,8 @@ html {
   min-height: 100vh;
   background-image: url('images/forest.png'); /* fantasy forest backdrop */
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  background-repeat: no-repeat;
   padding: 100px 40px;
 }
 
@@ -647,7 +684,8 @@ html {
   min-height: 100vh;
   background-image: url('images/library.png'); 
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  background-repeat: no-repeat;
   padding: 100px 40px;
 }
 
@@ -791,7 +829,7 @@ html {
 .contact-section {
   background-image: url('images/cafe.png'); /* your cafe hero image */
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   
   min-height: 100vh;               /* 🔥 Full screen height */
