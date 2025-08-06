@@ -23,7 +23,7 @@ h2{
  
 
 .hero-banner {
-  height: 100vh;
+  min-height: 100vh;  
   background-image: url("images/galaxy.png");
   background-size: cover;
   background-position: center;
