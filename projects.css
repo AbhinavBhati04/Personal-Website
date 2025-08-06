@@ -52,14 +52,37 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow-wrap: break-word; /* 🔧 New: Force wrapping of long text */
+  word-break: break-word;    /* 🔧 New: Additional safety for weird cases */
 }
 
 .project-info h2 {
   font-family: 'Press Start 2P', cursive;
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 20px;
   color: #222;
+  line-height: 1.4; /* 🔧 Prevent cramped stacking */
 }
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+  .project-info h2 {
+    font-size: 16px;
+  }
+
+  .project-info {
+    padding: 20px;
+  }
+
+  .project-list li {
+    font-size: 14px;
+  }
+
+  .project-card {
+    margin: 20px;
+  }
+}
+
 
 .project-info p {
   font-family: 'Montserrat', sans-serif;
@@ -85,12 +108,6 @@
   background-color: #004f99;
 }
 
-.nav-link i {
-  color: white;          /* Ensures icon is white */
-  margin-right: 8px;     /* Spacing between icon and text */
-  font-size: 16px;       /* Adjust size as needed */
-  vertical-align: middle;
-}
 
 .project-list {
   margin: 20px 0;
@@ -105,3 +122,20 @@
   line-height: 1.6;
   margin-bottom: 8px;
 }
+
+.home-img-link {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.home-img {
+  width: 40px;
+  height: 40px;
+}
+
+
+
