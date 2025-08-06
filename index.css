@@ -1028,7 +1028,7 @@ html {
   }
 
     .book-left {
-    transform: translateX(-50px);  /* shifts image to the left page */
+    transform: translateX(-60px);  /* shifts image to the left page */
   }
 
   .book-right {
