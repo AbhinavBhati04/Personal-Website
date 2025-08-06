@@ -1,0 +1,881 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+}   
+
+p{
+color: white;
+font-size: 50px;
+font-style: italic;
+font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+  font-family: 'Montserrat', sans-serif;
+}
+h2{
+  font-family: 'Montserrat', sans-serif;
+}
+ 
+
+.hero-banner {
+  height: 100vh;
+  background-image: url("images/galaxy.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    /* Vertically centers all content */
+  align-items: center;        /* Horizontally centers all content */
+}
+
+@keyframes flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.flicker {
+  animation: flicker 1.5s infinite;
+}
+
+.pixel-text p {
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  color: white;
+  line-height: 1.5;
+  transform: translateY(0px);
+}
+
+.small-line {
+  font-size: 30px;  /* Smaller first line */
+}
+
+@keyframes colorCycle {
+  0%   { color: #ff0000; }   /* Red */
+  25%  { color: #00ff00; }   /* Green */
+  50%  { color: #0000ff; }   /* Blue */
+  75%  { color: #ffff00; }   /* Yellow */
+  100% { color: #ff0000; }   /* Back to Red */
+}
+
+@keyframes colorFlicker {
+  0%, 100% { color: #ffffff; }
+  20% { color: #ff00ff; }
+  40% { color: #00ffff; }
+  60% { color: #ffff00; }
+  80% { color: #ff0000; }
+}
+
+.big-line {
+  font-size: 96px;  /* Larger name line */
+  animation: colorCycle 4s linear infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: white; }
+}
+.typing-line {
+  font-size: 30px;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white; /* blinking caret */
+  animation:
+    typing 3s steps(40, end) forwards,
+    blink-caret 0.8s step-end infinite;
+}
+
+
+.navbar {
+  position: fixed;              /* Always stays at the top */
+  top: 0;
+  left: 0;
+  width: 100%;                  /* Full width */
+  z-index: 1000;                /* Keeps it above other content */
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+ }
+  
+
+/* Logo */
+.logo {
+  height: 50px;
+}
+
+/* Navbar List */
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Links */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  font-size: 18px;
+  transition: transform 0.2s, border-bottom 0.2s;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Enlarge on Hover */
+.navbar a:hover {
+  transform: scale(1.1);
+}
+
+/* Underline for active page */
+.navbar a.active {
+  border-bottom: 3px solid white;
+}
+
+.nav-link.active {
+  border-bottom: 3px solid white;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+
+/* Create the underline effect with a pseudo-element */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform-origin: center;
+
+}
+
+/* Active state: fade and slide the underline in */
+.nav-link.active::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.arcade-button {
+  margin-top: 100px;  /* pushes button down from the text */
+  font-family: 'Press Start 2P', cursive;
+  font-size: 28px;
+  padding: 30px 60px;
+  color: white;
+  background-color: red;
+  border: 6px solid white;
+  text-transform: uppercase;
+  box-shadow: 
+    0 0 0 6px black,
+    0 14px 0 0 #700000,
+    0 14px 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+  animation: colorFlicker 2s infinite,pulse 2s infinite;
+  
+}
+
+/* Press down effect */
+.arcade-button:active {
+  transform: translateY(8px);
+  box-shadow:
+    0 0 0 6px black,
+    0 6px 0 0 #700000,
+    0 6px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+#about,
+#experiences,
+#portfolio,
+#contact,
+#articles {
+  scroll-margin-top: 30px;
+}
+
+.about-section {
+  height: 100vh;
+  background-image: url("images/sunset.jpg"); /* Change to your background */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  color: white;
+}
+
+/* About Section */
+
+.about-content {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  gap: 40px;
+}
+
+/* Simplified Image Container */
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+/* Text + Icons */
+.about-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.about-text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: black;
+}
+
+
+.about-box {
+  background-color: white;
+  color: black;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.next-button {
+  min-width: 300px;
+  display: inline-block;
+  margin-top: 30px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px;
+  padding: 20px 50px;
+  color: white;
+  text-transform: uppercase;
+  border: 4px solid white;
+  box-shadow: 
+    0 0 0 5px black,
+    0 10px 0 0 #5c1a8e,
+    0 10px 10px rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+
+  width: fit-content;
+  min-width: 270px; /* Enough for "Next Level" in this font */
+  text-align: center;
+  
+  animation: pulse 2s infinite;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+}
+
+.to-tavern {
+  display: block; 
+  margin: 30px auto 0;        
+  background-color: darkgrey;
+  
+}
+
+.to-forest {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: darkgrey;
+}
+
+.to-library {
+  letter-spacing: -10px;
+}
+
+.to-contact{
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: -10px;
+  background-color: darkgrey;
+  margin-top: 10px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+/* Press-down effect */
+.next-button:active {
+  transform: translateY(6px);
+  box-shadow: 
+    0 0 0 5px black,
+    0 4px 0 0 #5c1a8e,
+    0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+.wave-text span {
+  display: inline-block;
+  animation: waveColor 3s linear infinite;
+  animation-delay: calc(var(--i) * 0.2s);
+}
+
+/* Animate color through a cycle of vibrant hues */
+@keyframes waveColor {
+  0%   { color: #ff0000; }  /* red */
+  20%  { color: #ff7f00; }  /* orange */
+  40%  { color: #ffff00; }  /* yellow */
+  60%  { color: #00ff00; }  /* green */
+  80%  { color: #0000ff; }  /* blue */
+  100% { color: #ff0000; }  /* back to red */
+}
+
+/* Experiences Section */
+
+.experience-section {
+  height: 100vh;
+  background-image: url("images/tavern.jpg"); /* Customize this image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  color: white;
+  background-color: #f7f7f7;
+}
+
+.experience-container h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.experience-container p {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: #666;
+}
+.experience-content {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.experience-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.experience-card {
+  background-color: white;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  min-height: 530px;
+  max-width: 320px;
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-bottom: 0px;
+  text-align: left;
+  align-self: flex-start;
+}
+
+.logo-row {
+  display: flex;
+  gap: 20px;   
+}
+
+
+.icon-company1 {
+  width: 80px;
+}
+
+.icon-company2 {
+  width: 45px;
+}
+
+.icon-company3 {
+  width: 150px;
+  margin-bottom: 15px;
+  transform: translateY(5px);
+}
+
+
+.experience-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.experience-card p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.experience-header-box {
+  background-image: url('images/burnt-1.png');  /* Your parchment image */
+  background-size: 100% 100%;                      /* Stretch to fill box */
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 40px 30px;
+  border-radius: 12px;
+  margin: 0 auto 40px;
+  max-width: 600px;
+  text-align: center;
+
+  transform: rotate(-0.5deg); /* Tiny angle for realism */
+}
+
+.experience-header-box h1 {
+  margin: 0 0 10px;
+  font-size: 42px;
+  color: black;
+}
+
+.experience-header-box p {
+  margin: 0;
+  font-size: 24px;
+  color: #ff0000;
+  font-family: 'IM Fell English SC', serif;
+
+}
+
+
+/* Portfolio Section */
+.portfolio-section {
+  height: 100vh;
+  background-image: url('images/forest.png'); /* fantasy forest backdrop */
+  background-size: cover;
+  background-position: center;
+  padding: 100px 40px;
+}
+
+.portfolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.portfolio-header-box {
+  background-color: #014421; /* forest green */
+  padding: 30px 40px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-header-box h1 {
+  font-family: 'Almendra SC', serif;
+  font-size: 50px;
+  color: white;
+  margin: 0 0 10px;
+}
+
+.portfolio-header-box .subheading {
+  font-family: 'Rakkas', cursive;
+  font-size: 30px;
+  color: #cfe9d9;
+  margin: 0;
+}
+
+
+.portfolio-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.portfolio-card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.2s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+}
+
+.portfolio-card-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover; /* fills the space, cropping excess */
+  display: block;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.portfolio-card h3 {
+  font-size: 18px;
+  margin: 15px 0 5px;
+  color: #111;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.portfolio-card-type {
+  font-size: 14px;
+  color: #225E35; /* red/pink category color */
+  margin-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wooden-sign-centered {
+  position: relative;
+  margin: 0px auto 0;
+  width: 300px; /* adjust based on your image size */
+  text-align: center;
+}
+
+.wooden-sign-img {
+  width: 100%;
+  display: block;
+}
+
+.wooden-sign-link {
+  position: absolute;
+  top: 6%;                 
+  left: 50%;                
+  transform: translateX(-50%); 
+
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  
+  text-shadow: 1px 1px 2px black;
+  pointer-events: auto;
+}
+
+
+.sign-line {
+  display: block;
+  line-height: 1.4;
+}
+
+.top-line {
+  color:white;
+  margin-bottom: 15px; /* space between lines */
+  font-size: 40px;     /* top line larger */
+  font-family: 'Almendra SC', serif;
+}
+
+.bottom-line {
+  color:white;
+  font-size: 24px;     /* bottom line smaller or equal */
+  animation: colorCycle 10s infinite; 
+  font-family: 'Press Start 2P', cursive;
+}
+
+.sign-row {
+  display: flex;
+  justify-content: center;   /* centers both signs together */
+  align-items: flex-start;
+  gap: 40px;                 /* space between the signs */
+  margin-top: 30px;
+}
+
+/*Articles Section*/
+
+.articles-section {
+  background-image: url('images/library.png'); 
+  background-size: cover;
+  background-position: center;
+  padding: 100px 40px;
+}
+
+.articles-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.articles-header-box {
+  text-align: center;
+  margin-bottom: 40px;
+  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+  padding: 30px 40px;
+  border-radius: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.articles-header-box h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 50px;
+  color: white;
+  margin: 0 0 10px;
+}
+
+.articles-header-box .subheading {
+  font-family: 'Rakkas', cursive;
+  font-size: 30px;
+  color: white;
+  margin: 0;
+}
+
+.articles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1100px; /* 2 x 500px + gaps */
+  margin: 0 auto;
+}
+
+.article-book {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+}
+
+.book-pages {
+  display: flex;
+  background-image: url('images/book.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 250px; 
+  position: relative;
+}
+
+
+.book-left, .book-right {
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Image on left page */
+.article-img {
+  width: 70%;                
+  height: 100%;              
+  object-fit: cover;           
+  border: 2px solid black;
+  border-radius: 6px;
+  transform: translateX(65px);
+}
+
+
+/* Text on right page */
+.article-preview {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.5;
+  width: 70%;
+}
+
+/* Read more button below the book */
+.read-more-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  font-family: 'Cinzel', serif;
+  font-size: 25px;
+  color: white;
+  background-color: #014421;
+  text-decoration: none;
+  border-radius: 6px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #225E35;
+}
+
+.article-title-box {
+  background-color: rgba(0, 0, 0, 0.7);  /* dark semi-transparent background */
+  padding: 10px 20px;
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.article-title-box h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 21px;
+  color: white;
+  margin: 0;
+}
+
+.no-border {
+  border: none;
+}
+
+.glowy{
+  animation: colorCycle infinite 6s;
+  font-family: 'Press Start 2P', cursive;
+}
+
+
+/* Contact Section*/
+
+.contact-section {
+  background-image: url('images/cafe.png'); /* your cafe hero image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  height: 100vh;                 /* 🔥 Full screen height */
+  width: 100%;                   /* Full width */
+  
+  display: flex;
+  align-items: center;           /* Center content vertically */
+  justify-content: center;       /* Optional: center horizontally too */
+  padding: 40px;
+  color: #3e2f25;                /* Coffee brown text */
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgba(255, 248, 240, 0.9); /* warm cream overlay */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.contact-info {
+  flex: 1;
+  padding: 40px;
+}
+
+.contact-info h2 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 50px;
+  margin-bottom: 30px;
+  color: #5e412f;
+
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.info-item p{
+  font-size: 40px;
+}
+.info-item strong{
+  font-size: 30px;
+}
+
+.info-item .icon {
+  font-size: 69px;
+  margin-right: 15px;
+}
+
+.label {
+  text-transform: lowercase;
+  font-weight: bold;
+  color: #7a5e43;
+  margin-bottom: 4px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 40px;
+  justify-items: center;
+  align-items: center;
+}
+
+.social-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #3e2f25; /* Warm coffee brown or similar */
+}
+
+.social-item img {
+  width: 100px;
+  height: 100px;
+  transition: transform 0.3s ease;
+}
+
+.social-item p {
+  margin-top: 8px;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  color: #3e2f25;
+}
+
