@@ -23,7 +23,7 @@ h2{
  
 
 .hero-banner {
-  min-height: 100vh;  
+  height: 100vh;
   background-image: url("images/galaxy.png");
   background-size: cover;
   background-position: center;
@@ -34,6 +34,8 @@ h2{
   justify-content: center;    /* Vertically centers all content */
   align-items: center;        /* Horizontally centers all content */
 }
+
+
 
 @keyframes flicker {
   0%, 100% {
@@ -232,7 +234,7 @@ html {
 }
 
 .about-section {
-  height: 100vh;
+  min-height: 100vh;
   background-image: url("images/sunset.jpg"); /* Change to your background */
   background-size: cover;
   background-position: center;
@@ -381,7 +383,7 @@ html {
 /* Experiences Section */
 
 .experience-section {
-  height: 100vh;
+  min-height: 100vh;
   background-image: url("images/tavern.jpg"); /* Customize this image */
   background-size: cover;
   background-position: center;
@@ -503,7 +505,7 @@ html {
 
 /* Portfolio Section */
 .portfolio-section {
-  height: 100vh;
+  min-height: 100vh;
   background-image: url('images/forest.png'); /* fantasy forest backdrop */
   background-size: cover;
   background-position: center;
@@ -641,6 +643,7 @@ html {
 /*Articles Section*/
 
 .articles-section {
+  min-height: 100vh;
   background-image: url('images/library.png'); 
   background-size: cover;
   background-position: center;
@@ -790,7 +793,7 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   
-  height: 100vh;                 /* 🔥 Full screen height */
+  min-height: 100vh;               /* 🔥 Full screen height */
   width: 100%;                   /* Full width */
   
   display: flex;
