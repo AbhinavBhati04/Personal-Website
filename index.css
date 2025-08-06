@@ -235,15 +235,16 @@ html {
 
 .about-section {
   min-height: 100vh;
-  background-image: url("images/sunset.jpg"); /* Change to your background */
+  display: flex;
+  align-items: flex-start; /* 🔁 was center — causes clipping on zoom */
+  justify-content: center;
+  padding: 100px 40px;
+  background-image: url("images/sunset.jpg");
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 60px;
-  color: white;
+  box-sizing: border-box;
 }
+
 
 /* About Section */
 
