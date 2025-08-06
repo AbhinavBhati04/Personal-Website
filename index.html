@@ -28,6 +28,25 @@
         <div class = "container">
             <nav class = "navbar">
                 <img src = "images/nameLogo.png" class="logo">
+
+                  <!-- ✅ Hamburger Button for Mobile -->
+                <div class="hamburger" onclick="toggleMenu()">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <!-- ✅ Slide-out Side Nav -->
+                <div class="side-nav" id="sideMenu">
+                  <a href="index.html" onclick="closeMenu()">Home</a>
+                  <a href="#about" onclick="closeMenu()">About</a>
+                  <a href="#experiences" onclick="closeMenu()">Experiences</a>
+                  <a href="#portfolio" onclick="closeMenu()">Portfolio</a>
+                  <a href="#articles" onclick="closeMenu()">Articles</a>
+                  <a href="#contact" onclick="closeMenu()">Contact</a>
+                  <a href="projects.html" onclick="closeMenu()">Projects</a>
+                </div>
+                
                 <ul> 
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>

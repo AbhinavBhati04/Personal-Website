@@ -143,6 +143,77 @@ h2{
   padding: 10px 40px;
  }
   
+/* Hide desktop nav on mobile */
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    display: none;
+  }
+}
+
+/* Hamburger bars */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  z-index: 1001;
+}
+
+/* Hamburger lines */
+.hamburger span {
+  height: 4px;
+  width: 28px;
+  background: white;
+  display: block;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar ul {
+    display: none !important;
+  }
+}
+
+/* Slide-out nav */
+.side-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+  z-index: 9998;
+}
+
+.side-nav a {
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.side-nav a:hover {
+  background-color: #333;
+}
+
+
+/* Hide the regular navbar menu on small screens */
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    display: none !important;
+  }
+}
+
 
 /* Logo */
 .logo {
@@ -1002,4 +1073,62 @@ html {
   font-family: 'Montserrat', sans-serif;
   color: #3e2f25;
 }
+
+@media screen and (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .contact-info {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .contact-info h2 {
+    font-size: 32px;
+    word-break: break-word;
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .info-item .icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  .info-item p {
+    font-size: 18px;
+  }
+
+  .info-item strong {
+    font-size: 16px;
+  }
+
+  .label {
+    font-size: 12px;
+  }
+
+  .social-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .social-item img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .social-item p {
+    font-size: 12px;
+  }
+}
+
 
