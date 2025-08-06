@@ -2,7 +2,7 @@ const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-link");
 
 // Set Home as active on initial load
-document.querySelector('.nav-link[href="home.html"]').classList.add('active');
+document.querySelector('.nav-link[href="index.html"]').classList.add('active');
 
 
 window.addEventListener("scroll", () => {
